@@ -7,56 +7,54 @@
   crossorigin="anonymous"></script>
 
 <style> 
-img {                   
-  margin: 40px 0px 0px 0px;
-  border: 7px solid white;
-  border-radius: 20px;
-}
-body {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-   header {
-      text-align: center;
-      background: url("sunshine.png"); 
-      background-size: cover; 
-      color: white;
+  img {                   
+    margin: 40px 0px 0px 0px;
+    border: 7px solid white;
+    border-radius: 20px;
     }
-html{
-  background-color:#eee;
-}
-.container{
-  margin: 20px auto;
-  width:400px;
-  height:400px;
-  background-color:#fff;
-  display:grid;
-  grid-template-columns: 200px 200px;
-  grid-row: auto auto;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-}
-  
-  .box{
-    background-color:#333;
-    padding:20px;
-    border-radius:10px;
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:40px;
-    font-family:sans-serif;
+  body {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
   }
 
-}
+  header {
+    text-align: center;
+    background: url("sunshine.png"); 
+    background-size: cover; 
+    color: white;
+    }
+  html {
+    background-color:#eee;
+  }
+  .container{
+    margin: 20px auto;
+    width:400px;
+    height:400px;
+    background-color:#fff;
+    display:grid;
+    grid-template-columns: 200px 200px;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  
+    .box{
+      background-color:#333;
+      padding:20px;
+      border-radius:10px;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:40px;
+      font-family:sans-serif;
+    }
+
+  }
 
 </style>
-
-
-<header>
+  <header>
     <img src="banner.png">
     <h1>Comic Challenge</h1>
     <ul> 
@@ -66,23 +64,20 @@ html{
     </ul>
   </header>
 
-<body>
-
-
-<div class="container">
-  <div class="box">A</div>
-  <div class="box">B</div>
-  <div class="box">C</div>
-  <div class="box">D</div>
-</div>
-
+  <body>
+    <div class="container">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+  </div>
 <script>
 
-$(document).on('keypress', function(e) {
-  if(e.which == 13) {
-    showResponse();
-  }
-})
-$( "#ans" ).focus();
+  $(document).on('keypress', function(e) {
+    if(e.which == 13) {
+      showResponse();
+    }
+  })
+  $( "#ans" ).focus();
 </script>
 </body>
