@@ -5,9 +5,9 @@
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous">
-  
+  <script type='text/javascript' src='config.js'></script>
+</script>
 
-  </script>
 
 <style> 
   img {                   
@@ -87,11 +87,14 @@ $("header").on("click", "li", function (event) {
     console.log('a');
 });
 
-//api call
+//api variables 
+var mykey = config.MY_KEY;
+var secretkey = config.SECRET_KEY;
 //public key: bf6f3a09cd4a93384b5380e0771fe56f
-//private key: 5c7f86fd190c7439d3bbffcef5d1ff35aa795c17
+
 
 
 });
 </script>
+
 </body>
