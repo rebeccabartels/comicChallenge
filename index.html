@@ -1,3 +1,5 @@
+
+<!Doctype> 
 <head>
 <!-- <script src="/assets/jquery.js"></script>   -->
 
@@ -24,7 +26,6 @@
     padding:0;
     box-sizing:border-box;
   }
-
   header {
     text-align: center;
     background: url("sunshine.png"); 
@@ -39,7 +40,6 @@
     background-color:#eee;
   }
     .container{
-
       margin: 20px auto;
       width:400px;
       height:400px;
@@ -62,13 +62,10 @@
       font-size:40px;
       font-family:sans-serif;
     }
-
     #pokePic {
   visibility: hidden;
 }
-
   }
-
 </style>
   <header>
     <img src="banner.png">
@@ -82,7 +79,7 @@
 
   <body>
     <div class="container">
-      <div class="box">A</div>
+      <img id='pokePic' src='#'></img>
       <div class="box">B</div>
       <div class="box">C</div>
       <div class="box">D</div>
@@ -91,38 +88,26 @@
   <img id='pokePic' src='#'></img>
 </div>
 <script>
-
 //connecting buttons to the dom 
 $(function(){
 $("header").on("click", "li", function (event) {
     console.log('a');
 });
-
-
 var randomPokemon = Math.ceil(Math.random() * 721);
 $.getJSON('https://pokeapi.co/api/v2/pokemon/' + randomPokemon, setImage);
-
 function setImage(data) {
   $('#pokeName').text(data.name);
   $('#pokePic').css( 'visibility', 'visible' );
   $('#pokePic').attr('src', data.sprites.front_default);
 }
-
-
-
 function addImage(randomPokemon) {
-
       if (randomPokemon = true) {
         console.log("hi");
     
     }
 }
 addImage();
-
-
-
 /*var root = 'https://pokeapi.co/api/v2/pokemon/';
-
 $.ajax({
   url: root,
   method: 'GET'
@@ -134,10 +119,7 @@ $.ajax({
     $("p#pokemon").append("<p>"+ pokemon[i].name +"</p>");
   }
 });
-
 */
-
-
 });
 </script>
 
