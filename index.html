@@ -6,6 +6,10 @@
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous">
   <script type='text/javascript' src='config.js'></script>
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+
 </script>
 
 
@@ -87,10 +91,21 @@ $("header").on("click", "li", function (event) {
     console.log('a');
 });
 
-//api variables 
-var mykey = config.MY_KEY;
-var secretkey = config.SECRET_KEY;
-//public key: bf6f3a09cd4a93384b5380e0771fe56f
+
+var root = 'https://pokeapi.co/api/v2/pokemon/';
+
+$.ajax({
+  url: root,
+  method: 'GET'
+}).then(function(data) {
+  var pokemon = data.results;
+  $("p#pokemon").html("List of Pokemon");
+  //iterate over results
+  for(i = 0; i<pokemon.length; i++){
+    $("p#pokemon").append("<p>"+ pokemon[i].name +"</p>");
+  }
+  
+});
 
 
 
