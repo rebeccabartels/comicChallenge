@@ -4,7 +4,10 @@
 <script
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous">
+  
+
+  </script>
 
 <style> 
   img {                   
@@ -24,10 +27,15 @@
     background-size: cover; 
     color: white;
     }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
   html {
     background-color:#eee;
   }
     .container{
+
       margin: 20px auto;
       width:400px;
       height:400px;
@@ -58,9 +66,9 @@
     <img src="banner.png">
     <h1>Comic Challenge</h1>
     <ul> 
-      <li><a href="#">Press me</a></li>
-      <li><a href="#">Press me</a></li>
-      <li><a href="#">Press me</a></li>
+      <li><a href="#">List of comics</a></li>
+      <li><a href="#">Next page</a></li>
+      <li><a href="#">See this comic full screen</a></li>
     </ul>
   </header>
 
@@ -73,11 +81,17 @@
   </div>
 <script>
 
-  $(document).on('keypress', function(e) {
-    if(e.which == 13) {
-      showResponse();
-    }
-  })
-  $( "#ans" ).focus();
+//connecting buttons to the dom 
+$(function(){
+$("header").on("click", "li", function (event) {
+    console.log('a');
+});
+
+//api call
+// Public Key
+// fc0e2b2bcfc273962ce941db43aa2039
+
+
+});
 </script>
 </body>
