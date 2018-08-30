@@ -63,16 +63,20 @@
       font-family:sans-serif;
     }
 
+    #pokePic {
+  visibility: hidden;
+}
+
   }
 
 </style>
   <header>
     <img src="banner.png">
-    <h1>Comic Challenge</h1>
+    <h1>Comic/Pokemon Challenge</h1>
     <ul> 
-      <li><a href="#">List of comics</a></li>
-      <li><a href="#">Next page</a></li>
-      <li><a href="#">See this comic full screen</a></li>
+      <li><a href="#">I'm a button</a></li>
+      <li><a href="#">I'm a button too</a></li>
+      <li><a href="#">I'm also a button</a></li>
     </ul>
   </header>
 
@@ -83,6 +87,9 @@
       <div class="box">C</div>
       <div class="box">D</div>
   </div>
+  <div>
+  <img id='pokePic' src='#'></img>
+</div>
 <script>
 
 //connecting buttons to the dom 
@@ -92,7 +99,29 @@ $("header").on("click", "li", function (event) {
 });
 
 
-var root = 'https://pokeapi.co/api/v2/pokemon/';
+var randomPokemon = Math.ceil(Math.random() * 721);
+$.getJSON('https://pokeapi.co/api/v2/pokemon/' + randomPokemon, setImage);
+
+function setImage(data) {
+  $('#pokeName').text(data.name);
+  $('#pokePic').css( 'visibility', 'visible' );
+  $('#pokePic').attr('src', data.sprites.front_default);
+}
+
+
+
+function addImage(randomPokemon) {
+
+      if (randomPokemon = true) {
+        console.log("hi");
+    
+    }
+}
+addImage();
+
+
+
+/*var root = 'https://pokeapi.co/api/v2/pokemon/';
 
 $.ajax({
   url: root,
@@ -104,12 +133,9 @@ $.ajax({
   for(i = 0; i<pokemon.length; i++){
     $("p#pokemon").append("<p>"+ pokemon[i].name +"</p>");
   }
-  
 });
 
-
-
-
+*/
 
 
 });
